@@ -10,7 +10,7 @@ export default function TodoContainer() {
         <div style={{ backgroundImage: '' }}>
             <div style={{ marginTop: '2%', marginBottom: '2%', marginLeft: '10%', marginRight: '10%', display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <Header isEditing={isEditing} />
-                <TodoListContainer />
+                <TodoListContainer isEditing={isEditing} />
                 <FooterActions setEditing={setEditing} isEditing={isEditing} />
             </div>
         </div>
