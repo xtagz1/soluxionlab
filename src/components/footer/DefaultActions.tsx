@@ -2,17 +2,7 @@ import Button from "../common/Button";
 
 export default function DefaultActions({ setEditing }: any) {
     return (
-        <div>
-            <Button
-                onClick={
-                    // () => setEditing(true)
-                    () => alert('asdasd')
-                }
-                borderColor=""
-                background=""
-                color=""
-                buttonName="Edit"
-            />
+        <div style={{ display: 'flex', gap: '1em' }}>
             {/* <Button
                 onClick={() => null}
                 borderColor=""
@@ -20,6 +10,15 @@ export default function DefaultActions({ setEditing }: any) {
                 color=""
                 buttonName=""
             /> */}
+            <Button
+                onClick={
+                    () => setEditing(true)
+                }
+                borderColor=""
+                background=""
+                color=""
+                buttonName="Edit"
+            />
         </div>
     )
 }
