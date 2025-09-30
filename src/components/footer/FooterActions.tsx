@@ -1,14 +1,18 @@
-import Button from "../common/button";
+import DefaultActions from "./DefaultActions";
+import EditingActions from "./EditingActions";
 
-export default function FooterActions() {
+interface FooterActionsProps {
+    setEditing: any;
+    isEditing: boolean;
+}
+
+export default function FooterActions({ setEditing, isEditing }: FooterActionsProps) {
+
     return (
-        <div>
-            <Button
-                onClick={() => null}
-                borderColor=""
-                background=""
-                color=""
-                buttonName="" />
+        <div style={{ display: 'flex', justifyContent: 'right' }}>
+            {
+                isEditing ? <EditingActions setEditing={setEditing} /> : <DefaultActions setEditing={setEditing} />
+            }
         </div>
     )
 }
